@@ -16,18 +16,24 @@ class Solution:
         :type head: ListNode
         :rtype: ListNode
         """
-        if head == None or head.next == None:
+
+        if head == None or head.next == None :
             return None
-        slow = fast = head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-            if fast == slow:
+        slow_index = fast_index = head
+
+        while fast_index != None and fast_index.next != None :
+            fast_index = fast_index.next.next
+            slow_index = slow_index.next
+            if fast_index == slow_index:
                 break
-        if slow == fast:
-            slow = head
-            while slow != fast:
-                slow = slow.next
-                fast = fast.next
-            return slow
-        return None
+        if fast_index == None or fast_index.next == None :
+            return None
+
+        slow_index = head
+
+        while fast_index != slow_index:
+            slow_index = slow_index.next
+            fast_index = fast_index
+
+        return slow_index
+
