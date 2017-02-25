@@ -19,7 +19,8 @@ class Solution:
 
         if head == None or head.next == None :
             return None
-        slow_index = fast_index = head
+        slow_index = fast_index = head 
+        ### fast 以两倍速度跑，相遇，然后slow回head，以相同速度 跑，相遇点为结果点
 
         while fast_index != None and fast_index.next != None :
             fast_index = fast_index.next.next

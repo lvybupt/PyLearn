@@ -6,8 +6,8 @@ class Solution(object):
         """
         
         len_index = len(prices)
-        little = prices[0]
-        value = 0
+        little = prices[0] # 记录发现的最小点
+        value = 0 # 记录最大价值
         for i in range(0,len_index) :
         	if prices[i] <= little :
         		little = prices

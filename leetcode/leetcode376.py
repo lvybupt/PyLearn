@@ -14,13 +14,14 @@ class Solution(object):
             return 1
 
         #subseq = []
-        fast = nums[1]
-        slow = nums[0]
-        test = fast-slow
+        fast = nums[1] # 目前发现的最合适的拐点，作为拐点的备选点
+        slow = nums[0] # 确定的拐点
+        test = fast-slow # 记录是向上还是向下
         #subseq.append(slow)
         result = result + 1
-        i = 1
+        i = 1 # 遍历的变量
         while test == 0 and i < len_nums:
+            ##去掉数列开始时没用波动的部分
         	fast = nums[i]
         	test = fast - slow
         	i = i+1
