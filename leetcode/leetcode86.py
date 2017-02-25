@@ -17,7 +17,8 @@ class Solution(object):
 
         result = head
 
-        bfirst = slast = storage = None
+        bfirst = slast = storage = None 
+        #记录大的节点第一个，小的节点最后一个， storage 为head的前一节点，head用来遍历
 
         while head != None:
         	if head.val <x :
