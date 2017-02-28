@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 ### 代码来源http://www.cnblogs.com/xuanhun/p/5950433.html
+### python3 portScanner.py -H 127.0.0.1
 
 from socket import *
 import threading
